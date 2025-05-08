@@ -6,6 +6,12 @@ from NPModel import NPNeuralNetwork
 from Stats import process_results
 import pandas as pd
 
+def load_data():
+    (X_train, y_train), (_, _) = mnist.load_data() 
+    X_train = X_train.reshape(-1, 784) / 255.0
+    y_train = to_categorical(y_train, 10)
+    
+    return X_train, y_train
 
 X_train, _, y_train, _, _ = load_data()
 
