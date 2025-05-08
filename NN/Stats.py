@@ -402,15 +402,21 @@ def process_results(model_1, model_2):
     print_summary_table(results, convergence_df)
 
 
-architecture = [784, 32, 32, 10]
+def main():
+    architecture = [784, 32, 32, 10]
 
-model_1 = NeuralNetwork(architecture)
-model_1.load_model()
+    model_1 = NeuralNetwork(architecture)
+    model_1.load_model()
 
-model_2 = NPNeuralNetwork(architecture)
-model_2.load_model()
+    model_2 = NPNeuralNetwork(architecture)
+    model_2.load_model()
 
-process_results(model_1, model_2)
+    process_results(model_1, model_2)
+
+if __name__ == "__main__":
+    main()
+
+
 
 
 
