@@ -57,7 +57,6 @@ def show_comparison_stats(acc_1, acc_2, lss_1, lss_2, label_1='Standard NN', lab
     ax2.grid(True, linestyle='--', alpha=0.6)
 
     plt.tight_layout()
-    plt.savefig('training_comparison.png', dpi=300)
     plt.show()
 
 def load_data():
@@ -269,7 +268,6 @@ def plot_pca_visualization(X_test, y_test_orig, results, figsize=(16, 7)):
         ax.grid(True, linestyle='--', alpha=0.6)
     
     plt.tight_layout()
-    plt.savefig('pca_visualization.png', dpi=300)
     plt.show()
 
 def plot_epoch_convergence(acc_1, acc_2, lss_1, lss_2, figsize=(12, 6)):
@@ -320,7 +318,6 @@ def plot_epoch_convergence(acc_1, acc_2, lss_1, lss_2, figsize=(12, 6)):
     ax.grid(True, linestyle='--', alpha=0.6)
     
     plt.tight_layout()
-    plt.savefig('convergence_speed.png', dpi=300)
     plt.show()
     
     # Return the data for reporting
@@ -401,7 +398,6 @@ def process_results(model_1, model_2):
 
     print_summary_table(results, convergence_df)
 
-
 def main():
     architecture = [784, 32, 32, 10]
 
@@ -415,12 +411,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
