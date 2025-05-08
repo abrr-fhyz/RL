@@ -1,7 +1,7 @@
 import numpy as np
 
 class NPNeuralNetwork:
-    def __init__(self, layers, initial_lr=0.001):
+    def __init__(self, layers, initial_lr=0.001, use_hebbian=True):
         self.filename = "model_np.npz"
         self.layers = layers
         self.no_of_layers = len(layers)
@@ -18,7 +18,7 @@ class NPNeuralNetwork:
 
         # Hyperparameters for neuroplasticity:
         self.hebbian_rate = 1e-4          # scaling factor for Hebbian update
-        self.use_hebbian = False          # disable Hebbian term for diagnostics; reenable later if desired
+        self.use_hebbian = use_hebbian          # disable Hebbian term for diagnostics; reenable later if desired
         self.prune_threshold = 1e-4       # threshold for cumulative update below which connections are pruned  
         self.requalify_threshold = 1e-2   # if weights are near zero, they get reinitialized when loss degrades
 
